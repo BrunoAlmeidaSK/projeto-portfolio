@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* config Padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* indica que o tamanho agora levará em conta até a borda */
+    font-family: var(--font01);
+}
+
+/* Criando variaveis */
+:root{
+    --font01: 'Poppins', sans-serif ;
+    --corPri: #5A279D;
+    --corSec: #6641AE;
+    --corTer: #7248B8;
+    --corQuar: #8D4CAF;
+    --corQuin: #D6ADDB;
+}
+
+body{
+    background: var(--corPri);
+    color: #ededed;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+   
+}
+
+/* Config da logo */
+.logo{
+    font-size: 25px;
+    font-weight: 600;
+    color: #ededed;
+    text-decoration: none;
+}
+
+/* config estilo do menu */
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active{ /* classe 'a.active' deixa ativado a cor do homer*/
+    color: #02fc02;
+}
+
+/* config estilo da home */
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    background: transparent;
+    max-width: 600px;
+
+}
+
+.home-content h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height:1.2 ;
+}
+
+.home-content h3{
+    font-size: px;
+    font-weight:700;
+    color: #0ac90a;
+}
+
+.home-content p{
+    font-size: 15px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+
+}
+
+/* config do entrar em Contato */
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #0cbb0c;
+    border: 2px solid #1be01bbb;
+    border-radius: 8px;
+    font-weight: 19px;
+    color: var(--corPri);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #14fa14bb;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+    background: var(--corQuar);
+    z-index: -1;
+    transition: .4s;
+    
+}
+
+.btn-box a:hover:before{
+    width: 100%;
+    border-radius: 8px;
+   
+}
+
+.btn-box a:hover{
+    color: #02fc02;
+    
+}
