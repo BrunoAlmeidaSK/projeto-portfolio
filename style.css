@@ -41,11 +41,25 @@ body{
 
 /* Config da logo */
 .logo{
+    position: relative;
     font-size: 25px;
     font-weight: 600;
     color: #ededed;
     text-decoration: none;
 }
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
 
 /* config estilo do menu */
 .navbar a{
@@ -64,6 +78,8 @@ body{
 /* config estilo da home */
 .home{
     height: 100vh;
+    background: url('imagem/home.png') right no-repeat;
+    background-size: contain;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -76,29 +92,84 @@ body{
 }
 
 .home-content h1{
+    position: relative;
     font-size: 40px;
     font-weight: 700;
     line-height:1.2 ;
 }
 
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
 .home-content h3{
+    position: relative;
     font-size: px;
     font-weight:700;
     color: #0ac90a;
 }
 
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
 .home-content p{
+    position: relative;
     font-size: 15px;
     margin: 20px 0 40px;
 }
 
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
 .home-content .btn-box{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
 
 }
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
 
 /* config do entrar em Contato */
 .btn-box a{
@@ -149,3 +220,102 @@ body{
     color: #02fc02;
     
 }
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+ .home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #02fc02 ;
+    border-radius: 50%;
+    font-size: 25px;
+    text-decoration: none;
+    color: #02fc02;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+ }
+
+ .home-sci a:hover{
+    color: var(--corQuar);
+ }
+
+ .home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #02fc02;
+    border-radius: 50%;
+    z-index: -1;
+    transition: .4s;
+    
+ }
+
+ .home-sci a:hover:before{
+    width: 100%;
+ }
+
+ .home-imgHover{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    width: 1000px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+ }
+
+ .home-imgHover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corPri);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+ .home-imgHover:hover{
+    background: var(--corPri);
+    opacity: .4;
+ }
+
+/* Chaves de animação */
+@keyframes showRight{
+    100%{
+        width:0;
+    }
+}
+
+
