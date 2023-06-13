@@ -78,7 +78,7 @@ body{
 /* config estilo da home */
 .home{
     height: 100vh;
-    background: url('imagem/home.png') right no-repeat;
+    /* background: url('imagem/home.png') right no-repeat; */
     background-size: contain;
     display: flex;
     align-items: center;
