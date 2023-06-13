@@ -60,26 +60,51 @@ body{
     animation-delay: .4s;
 }
 
+/* Configuração menu hamburguer */
 
-/* config estilo do menu */
-.navbar a{
-    font-size: 18px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+span#burguer{
+    background-color: #6641AE;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
 }
 
-.navbar a:hover, .navbar a.active{ /* classe 'a.active' deixa ativado a cor do homer*/
-    color: #02fc02;
+span#burguer:hover{
+    background-color: #6641AE;
+    color: #8D4CAF;
+}
+
+menu{
+    display: none;
+
+}
+
+menu>ul{
+    list-style-type: style none;
+}
+
+/* config estilo do menu */
+menu>ul>li>a{
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 2px solid var(--corQuar);
+}
+
+menu a:hover{
+    background-color: #8D4CAF;
 }
 
 /* config estilo da home */
 .home{
     height: 100vh;
-    /* background: url('imagem/home.png') right no-repeat; */
-    background-size: contain;
+    background: url('imagem/background.png') right no-repeat; 
+    background-size: cover;
     display: flex;
     align-items: center;
     padding: 0 10%;

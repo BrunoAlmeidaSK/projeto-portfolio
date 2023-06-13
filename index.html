@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="media-query.css">
     <link rel="stylesheet" href="responsivo.css">
     <title>Personal Portfolio HTML CSS</title>
 </head>
+
 <body>
     <!-- Cabeçalho -->
-    <header class="header">
-        
-        <a href="#" class="logo">Bruno.</a>
-        
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Portfólio</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
+    <header class="header" onresize="mudouTamanho()">
 
-        
+        <a href="#" class="logo">Bruno.</a>
+
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="navbar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfólio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </menu>
+
+
     </header>
 
     <!-- Config conteudo da home -->
-    <section class="home"> 
+    <section class="home">
         <div class="home-content">
             <h1>Hi, I'm Bruno Almeida</h1>
             <h3>Frontend Developer</h3>
             <p>
-                Terminei minha faculdade de jogos digitais no ano de 2021 e estou agora cursando desenvolvimento de WebSites como Frontend, considero me especializar cada vez mais nessa área, tenho um bom conhecimento com o software Blender na área de modelagem 3D, no Frontend tenho conhecimento em HTML , CSS E JAVASCRIPT. Buscando sempre está estudando e buscando me desenvolver mais profissionalmente e procurar evoluir sempre e alcançar patamar mais altos e conquistar meus objetivos.
+                Terminei minha faculdade de jogos digitais no ano de 2021 e estou agora cursando desenvolvimento de
+                WebSites como Frontend, considero me especializar cada vez mais nessa área, tenho um bom conhecimento
+                com o software Blender na área de modelagem 3D, no Frontend tenho conhecimento em HTML , CSS E
+                JAVASCRIPT. Buscando sempre está estudando e buscando me desenvolver mais profissionalmente e procurar
+                evoluir sempre e alcançar patamar mais altos e conquistar meus objetivos.
             </p>
             <div class="btn-box">
                 <a href="mailto:bruno0299@hotmail.com">Contrate-me</a>
@@ -41,13 +52,41 @@
         </div>
 
         <div class="home-sci">
-            <a href="https://www.linkedin.com/in/bruno-almeida-171ba2219/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
-            <a href="https://www.instagram.com/brunoalm__/" target="_blank"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://github.com/BrunoAlmeidaSK" target="_blank"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/bruno-almeida-171ba2219/" target="_blank"><i
+                    class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.instagram.com/brunoalm__/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/BrunoAlmeidaSK" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
 
         <span class="home-imgHover"></span>
 
     </section>
+
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }
+            else {
+                itens.style.display = 'none'
+            }
+        }
+
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            }
+
+            else {
+                itens.style.display = 'block'
+            }
+
+        }
+
+
+    </script>
 </body>
+
 </html>
